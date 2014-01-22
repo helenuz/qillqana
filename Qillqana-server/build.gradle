@@ -1,0 +1,13 @@
+apply plugin:'groovy'
+apply plugin:'application'
+
+mainClassName="pe.edu.unsaac.in.qillqana.server.ServerApp"
+
+repositories{
+	mavenCentral()
+}
+
+dependencies{
+	compile 'org.codehaus.groovy:groovy-all:2.2.1'
+	//compile project(':Qillqana:Qillqana-common')
+}

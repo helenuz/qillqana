@@ -1,0 +1,38 @@
+subprojects {
+	apply plugin: 'java'
+	group='pe.edu.unsaac.in.pizarra'
+	version='1.0'
+
+	dependencies{
+		compile 'log4j:log4j:1.2.16'
+		compile 'log4j:log4j:1.2.16'
+		compile 'com.google.code.gson:gson:2.2.4'
+	}
+
+	repositories{
+		mavenCentral()
+	}
+}
+
+project(':Qillqana-client-swing'){
+
+	apply plugin:'groovy'
+	apply plugin:'application'
+
+	mainClassName='pe.edu.unsaac.in.qillqana.client.swing.ClientApp'
+
+	dependencies{
+		compile project(':Qillqana-common')
+		compile 'com.miglayout:miglayout:3.7.4'
+	}
+}
+
+project(':Qillqana-server'){
+
+	apply plugin:'groovy'
+	apply plugin:'application'
+
+	dependencies{
+		compile project(':Qillqana-common')
+	}
+}
